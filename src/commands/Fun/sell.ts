@@ -116,7 +116,7 @@ export default class extends BotCommand {
 					}
 					else {
 						const osItem = oldschooljs.Items.get(parseInt(itemID));
-						
+
 						if (!osItem) throw `That item doesnt exist.`;
 						if (!('tradeable' in osItem) || !osItem.tradeable) continue;
 
@@ -189,10 +189,9 @@ export default class extends BotCommand {
 				);
 
 				return msg.send(
-					`Sold bank.`
+					`Sold all listed items for a total of ${totalSellPrice.toLocaleString()}!`
 				);
 			}
 		}
 	}
-
 }
