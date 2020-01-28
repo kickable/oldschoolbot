@@ -116,7 +116,9 @@ export default class extends BotCommand {
 					}
 					else {
 						const osItem = oldschooljs.Items.get(parseInt(itemID));
+						
 						if (!osItem) throw `That item doesnt exist.`;
+						if (!('tradeable' in osItem) || !osItem.tradeable) continue;
 
 						let priceOfItem = await this.client.fetchItemPrice(itemID);
 
