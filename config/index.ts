@@ -5,7 +5,7 @@ import streamers from '../data/osrs-streamers';
 import { token, twitchClientID, twitterApp } from './private.js';
 import permissionLevels from '../src/lib/config/permissionLevels';
 
-const production = require('os').platform() === 'linux';
+const production = false;
 
 const clientProperties = {
 	streamers,

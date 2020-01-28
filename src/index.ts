@@ -21,9 +21,9 @@ class OldSchoolBot extends Client {
 	}
 
 	async fetchItemPrice(itemID: number | string) {
-		if (!this.production) {
-			return 73
-		}
+		// if (!this.production) {
+		// 	return 73
+		// }
 
 		if (typeof itemID === 'string') itemID = parseInt(itemID);
 
